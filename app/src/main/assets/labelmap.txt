@@ -64,7 +64,7 @@ couch
 potted plant
 bed
 ???
-dining table
+
 ???
 ???
 toilet
@@ -73,7 +73,7 @@ tv
 laptop
 mouse
 remote
-keyboard
+
 cell phone
 microwave
 oven
