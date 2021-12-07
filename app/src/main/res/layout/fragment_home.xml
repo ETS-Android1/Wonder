@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background_img"
+    android:orientation="vertical"
+    tools:context=".Fragment_home">
+
+    //홈 프래그먼트 화면
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        >
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/home_icon_setting">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            >
+
+        </TextView>
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/home_icon_alarm">
+
+        </ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="75dp"
+        android:layout_width="315dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/home_backimg_itembuy2"
+        android:gravity="center"
+        >
+        <ImageButton
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:background="@drawable/home_btn_location"
+            android:layout_marginTop="10dp">
+
+        </ImageButton>
+        <ImageButton
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:background="@drawable/home_btn_item"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp">
+
+        </ImageButton>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
