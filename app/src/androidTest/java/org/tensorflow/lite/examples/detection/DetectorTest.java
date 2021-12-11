@@ -28,7 +28,12 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.RectF;
+import android.os.Bundle;
 import android.util.Size;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import java.io.IOException;
@@ -46,7 +51,8 @@ import org.tensorflow.lite.examples.detection.tflite.TFLiteObjectDetectionAPIMod
 
 /** Golden test for Object Detection Reference app. */
 @RunWith(AndroidJUnit4.class)
-public class DetectorTest {
+public class DetectorTest extends AppCompatActivity {
+  CardView cardView_bottle;
 
   private static final int MODEL_INPUT_SIZE = 300;
   private static final boolean IS_MODEL_QUANTIZED = true;
@@ -90,6 +96,8 @@ public class DetectorTest {
     final List<Recognition> results = detector.recognizeImage(croppedBitmap);
     final List<Recognition> expected = loadRecognitions("table_results.txt");
 
+    cardView_bottle = (CardView)findViewById(R.id.cardview_bottle);
+
     for (Recognition target : expected) {
       // Find a matching result in results
       boolean matched = false;
@@ -102,10 +110,16 @@ public class DetectorTest {
           matched = true;
           break;
         }
+        String a = "bed";
+        if(item.getTitle().equals(a)){
+          cardView_bottle.setVisibility(View.VISIBLE);
+        }
       }
       assertThat(matched).isTrue();
     }
   }
+
+
 
   // Confidence tolerance: absolute 1%
   private static boolean matchConfidence(float a, float b) {

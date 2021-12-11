@@ -27,16 +27,27 @@ import android.graphics.RectF;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.util.TypedValue;
+import android.view.View;
+import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import org.tensorflow.lite.examples.detection.R;
 import org.tensorflow.lite.examples.detection.env.BorderedText;
 import org.tensorflow.lite.examples.detection.env.ImageUtils;
 import org.tensorflow.lite.examples.detection.env.Logger;
 import org.tensorflow.lite.examples.detection.tflite.Detector.Recognition;
 
+import android.app.Activity;
+import android.os.Bundle;
+
 /** A tracker that handles non-max suppression and matches existing objects to new detections. */
-public class MultiBoxTracker {
+public class MultiBoxTracker extends AppCompatActivity {
   private static final float TEXT_SIZE_DIP = 18;
   private static final float MIN_SIZE = 16.0f;
   private static final int[] COLORS = {
@@ -67,6 +78,16 @@ public class MultiBoxTracker {
   private int frameWidth;
   private int frameHeight;
   private int sensorOrientation;
+
+  public static View cardView;
+
+
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.tfe_od_activity_camera);
+    cardView = (View)findViewById(R.id.cardview_bottle);
+  }
+
 
   public MultiBoxTracker(final Context context) {
     for (final int color : COLORS) {
@@ -121,6 +142,7 @@ public class MultiBoxTracker {
   }
 
   public synchronized void draw(final Canvas canvas) {
+
     final boolean rotated = sensorOrientation % 180 == 90;
     final float multiplier =
         Math.min(
@@ -151,6 +173,13 @@ public class MultiBoxTracker {
       // labelString);
       borderedText.drawText(
           canvas, trackedPos.left + cornerSize, trackedPos.top, labelString + "%", boxPaint);
+
+
+      String a = "bed";
+
+      if(recognition.title.equals(a)){
+        //cardView.setVisibility(View.INVISIBLE);
+      }
     }
   }
 
@@ -199,6 +228,7 @@ public class MultiBoxTracker {
       if (trackedObjects.size() >= COLORS.length) {
         break;
       }
+
     }
   }
 

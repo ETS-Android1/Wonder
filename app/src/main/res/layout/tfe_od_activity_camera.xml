@@ -40,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentTop="true"
+            android:visibility="gone"
             android:background="@color/tfe_semi_transparent">
 
             <ImageView
@@ -52,5 +53,15 @@
 
     <include
         android:id="@+id/bottom_sheet_layout"
+        android:visibility="invisible"
         layout="@layout/tfe_od_layout_bottom_sheet" />
+
+
+    <include
+        android:id="@+id/cardview_bottle"
+        android:visibility="invisible"
+        layout="@layout/object_info_card">
+
+    </include>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
