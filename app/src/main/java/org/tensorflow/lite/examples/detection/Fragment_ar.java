@@ -83,7 +83,7 @@ public class Fragment_ar extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getActivity(),
-                        DetectorActivity.class
+                        AR_select_item.class
                 );
 
                 startActivity(intent);

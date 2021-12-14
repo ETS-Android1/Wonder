@@ -27,11 +27,8 @@ import android.graphics.RectF;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.util.TypedValue;
-import android.view.View;
-import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -43,7 +40,6 @@ import org.tensorflow.lite.examples.detection.env.ImageUtils;
 import org.tensorflow.lite.examples.detection.env.Logger;
 import org.tensorflow.lite.examples.detection.tflite.Detector.Recognition;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 /** A tracker that handles non-max suppression and matches existing objects to new detections. */
@@ -79,14 +75,8 @@ public class MultiBoxTracker extends AppCompatActivity {
   private int frameHeight;
   private int sensorOrientation;
 
-  public static View cardView;
 
 
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.tfe_od_activity_camera);
-    cardView = (View)findViewById(R.id.cardview_bottle);
-  }
 
 
   public MultiBoxTracker(final Context context) {
@@ -174,14 +164,10 @@ public class MultiBoxTracker extends AppCompatActivity {
       borderedText.drawText(
           canvas, trackedPos.left + cornerSize, trackedPos.top, labelString + "%", boxPaint);
 
-
-      String a = "bed";
-
-      if(recognition.title.equals(a)){
-        //cardView.setVisibility(View.INVISIBLE);
-      }
     }
   }
+
+
 
   private void processResults(final List<Recognition> results) {
     final List<Pair<Float, Recognition>> rectsToTrack = new LinkedList<Pair<Float, Recognition>>();
@@ -232,10 +218,41 @@ public class MultiBoxTracker extends AppCompatActivity {
     }
   }
 
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.tfe_od_activity_camera);
+    setContentView(R.layout.ar_object_info_card);
+
+    //Button button = (Button) findViewById(R.id.start_detection);
+
+   // button.setOnClickListener(new View.OnClickListener(){
+    //  public void onClick(View v){
+    //    detection.setVisibility(View.VISIBLE);
+   //   }
+   // });
+
+
+  //  TrackedRecognition.ObjectDetector(detection);
+  }
+
+
+
+
   private static class TrackedRecognition {
     RectF location;
     float detectionConfidence;
     int color;
-    String title;
-  }
+    public static String title;
+
+
+    //public static void ObjectDetector(ImageView detection) {
+   //   String a = "bed";
+    //  if(title.equals(a)){
+    //    detection.setVisibility(View.VISIBLE);
+
+     // }
+    }
+
+
+
 }

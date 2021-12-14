@@ -53,15 +53,10 @@
 
     <include
         android:id="@+id/bottom_sheet_layout"
-        android:visibility="invisible"
+        android:visibility="gone"
         layout="@layout/tfe_od_layout_bottom_sheet" />
 
 
-    <include
-        android:id="@+id/cardview_bottle"
-        android:visibility="invisible"
-        layout="@layout/object_info_card">
 
-    </include>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
