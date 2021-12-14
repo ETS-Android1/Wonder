@@ -73,12 +73,14 @@
                     android:layout_marginTop="15dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
+                    android:gravity="center"
+                    android:layout_height="36dp">
 
                     <Button
+                        android:id="@+id/ar_shop_1"
                         android:layout_width="wrap_content"
                         android:layout_height="33dp"
-                        android:background="@drawable/ar_background_selectitem"
+                        android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
                         android:textColor="#000000"
                         android:layout_marginRight="15dp"
@@ -86,9 +88,10 @@
 
                     </Button>
                     <Button
+                        android:id="@+id/ar_shop_2"
                         android:layout_width="wrap_content"
                         android:layout_height="33dp"
-                        android:background="@drawable/ar_background_selectitem"
+                        android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
                         android:layout_marginRight="15dp"
                         android:textColor="#000000"
@@ -96,17 +99,20 @@
 
                     </Button>
                     <Button
+                        android:id="@+id/ar_shop_3"
                         android:layout_width="wrap_content"
                         android:layout_height="33dp"
-                        android:background="@drawable/ar_background_selectitem"
+                        android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
                         android:textColor="#000000"
-                        android:text="아로마티">
+                        android:text="아로마티카">
 
                     </Button>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/item_select_layout"
+                    android:visibility="invisible"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_marginTop="40dp"
@@ -141,28 +147,31 @@
                             android:orientation="horizontal"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="34dp">
+                            android:layout_height="36dp">
                             <Button
+                                android:id="@+id/item_face"
                                 android:layout_width="wrap_content"
                                 android:layout_height="33dp"
-                                android:background="@drawable/ar_background_selectitem_pink"
+                                android:background="@drawable/ar_btn_selector"
                                 android:textSize="15dp"
                                 android:textColor="#000000"
                                 android:text="페이스">
                             </Button>
                             <Button
+                                android:id="@+id/item_cleanser"
                                 android:layout_width="wrap_content"
                                 android:layout_height="33dp"
-                                android:background="@drawable/ar_background_selectitem_pink"
+                                android:background="@drawable/ar_btn_selector"
                                 android:textSize="15dp"
                                 android:textColor="#000000"
                                 android:text="세제">
 
                             </Button>
                             <Button
+                                android:id="@+id/item_body"
                                 android:layout_width="wrap_content"
                                 android:layout_height="33dp"
-                                android:background="@drawable/ar_background_selectitem_pink"
+                                android:background="@drawable/ar_btn_selector"
                                 android:textSize="15dp"
                                 android:textColor="#000000"
                                 android:text="바디">
@@ -171,6 +180,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/item_face_items"
                             android:visibility="visible"
                             android:layout_marginTop="50dp"
                             android:layout_width="match_parent"
@@ -218,7 +228,7 @@
                                 android:orientation="horizontal"
                                 android:gravity="center"
                                 android:layout_width="match_parent"
-                                android:layout_height="34dp">
+                                android:layout_height="36dp">
                                 <Button
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
@@ -253,6 +263,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/item_cleanser_items"
                             android:visibility="invisible"
                             android:layout_marginTop="50dp"
                             android:layout_width="match_parent"
@@ -271,7 +282,7 @@
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
-                                    android:text="세탁세">
+                                    android:text="세탁세제">
                                 </Button>
                                 <Button
                                     android:layout_width="wrap_content"
@@ -299,6 +310,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/item_body_items"
                             android:visibility="invisible"
                             android:layout_marginTop="50dp"
                             android:layout_width="match_parent"
@@ -309,20 +321,23 @@
                                 android:orientation="horizontal"
                                 android:gravity="center"
                                 android:layout_width="match_parent"
-                                android:layout_height="34dp">
+                                android:layout_height="36dp">
+
                                 <Button
+                                    android:id="@+id/body_shanpoo"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
-                                    android:background="@drawable/ar_background_selectitem"
+                                    android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="샴푸">
                                 </Button>
                                 <Button
+                                    android:id="@+id/body_bodywash"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
-                                    android:background="@drawable/ar_background_selectitem"
+                                    android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
@@ -330,9 +345,10 @@
 
                                 </Button>
                                 <Button
+                                    android:id="@+id/body_hairessence"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
-                                    android:background="@drawable/ar_background_selectitem"
+                                    android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     android:text="헤어에센스">
@@ -345,21 +361,24 @@
                                 android:layout_marginTop="15dp"
                                 android:orientation="horizontal"
                                 android:gravity="center"
+                                android:layout_gravity="center"
                                 android:layout_width="match_parent"
-                                android:layout_height="34dp">
+                                android:layout_height="36dp">
                                 <Button
+                                    android:id="@+id/body_conditioner"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
-                                    android:background="@drawable/ar_background_selectitem"
+                                    android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="컨디셔너">
                                 </Button>
                                 <Button
+                                    android:id="@+id/body_allinone"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
-                                    android:background="@drawable/ar_background_selectitem"
+                                    android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
@@ -367,9 +386,10 @@
 
                                 </Button>
                                 <Button
+                                    android:id="@+id/body_handwash"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
-                                    android:background="@drawable/ar_background_selectitem"
+                                    android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
                                     android:text="핸드워시">
@@ -387,6 +407,8 @@
 
 
                 <LinearLayout
+                    android:id="@+id/item_name"
+                    android:visibility="invisible"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
@@ -398,17 +420,20 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textSize="15dp"
+                        android:layout_gravity="center"
                         android:textColor="#000000"
                         android:text="용기에 담을 제품을 선택해주세요">
 
                     </TextView>
 
                     <Spinner
-                        android:gravity="center"
+                        android:background="@drawable/ar_btn_detection"
                         android:layout_marginTop="15dp"
                         android:id="@+id/spinner_item"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:layout_weight="1">
                     </Spinner>
 
@@ -416,6 +441,8 @@
 
 
                 <LinearLayout
+                    android:id="@+id/item_g"
+                    android:visibility="invisible"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
@@ -427,22 +454,23 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textSize="15dp"
+                        android:layout_gravity="center"
                         android:textColor="#000000"
-                        android:text="담고 싶은 g을 입력해주세요">
+                        android:text="담고싶은 g수를 입력해주세요">
 
                     </TextView>
 
                     <Spinner
+                        android:background="@drawable/ar_btn_detection"
                         android:layout_marginTop="15dp"
                         android:id="@+id/spinner_g"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="30dp"
                         android:gravity="center"
                         android:layout_weight="1">
                     </Spinner>
 
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -451,6 +479,7 @@
                     >
                     <Button
                         android:id="@+id/item_select_complete"
+                        android:visibility="invisible"
                         android:layout_width="140dp"
                         android:layout_height="41dp"
                         android:background="@drawable/ar_btn_detection"

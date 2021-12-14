@@ -96,3 +96,4 @@ public class Fragment_ar extends Fragment {
 
     }
 }
+

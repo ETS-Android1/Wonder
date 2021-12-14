@@ -221,7 +221,7 @@ public class MultiBoxTracker extends AppCompatActivity {
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.tfe_od_activity_camera);
-    setContentView(R.layout.ar_object_info_card);
+    setContentView(R.layout.ar_object_info);
 
     //Button button = (Button) findViewById(R.id.start_detection);
 

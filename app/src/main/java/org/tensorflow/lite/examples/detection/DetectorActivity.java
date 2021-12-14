@@ -17,6 +17,7 @@
 package org.tensorflow.lite.examples.detection;
 
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -27,10 +28,19 @@ import android.graphics.Paint.Style;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.media.ImageReader.OnImageAvailableListener;
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +92,64 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   private MultiBoxTracker tracker;
 
   private BorderedText borderedText;
+
+
+
+  Button ar_object_detection_start;
+  LinearLayout object_detection_info;
+  Button ar_object_detection_compelete;
+  LinearLayout object_detection_end_linear;
+  Button ar_object_detection_end;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.tfe_od_activity_camera);
+
+    object_detection_info =(LinearLayout) findViewById(R.id.object_detection_info);
+    object_detection_end_linear=(LinearLayout) findViewById(R.id.object_detection_end_linear);
+    //스캔 시작 버튼
+    ar_object_detection_start=(Button) findViewById(R.id.ar_object_detection_start);
+    ar_object_detection_start.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        object_detection_info.setVisibility(View.VISIBLE);
+        ar_object_detection_start.setVisibility(View.INVISIBLE);
+      }
+    });
+
+    //스캔 완료 버튼
+    ar_object_detection_compelete=(Button) findViewById(R.id.ar_object_detection_compelete);
+    ar_object_detection_compelete.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        object_detection_info.setVisibility(View.INVISIBLE);
+        object_detection_end_linear.setVisibility(View.VISIBLE);
+      }
+    });
+
+    //완료 버튼
+    ar_object_detection_end=(Button) findViewById(R.id.ar_object_detection_end);
+    ar_object_detection_end.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+      }
+    });
+  }
+
+
+
+  @Override
+  public void onClick(View v) {
+
+  }
+
+
+
+
 
   @Override
   public void onPreviewSizeChosen(final Size size, final int rotation) {
