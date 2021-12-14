@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ObjectDetection">
         <activity
+            android:name=".AR_camera"
+            android:exported="true" />
+        <activity
             android:name=".AR_select_item"
             android:exported="true" />
         <activity
@@ -32,7 +35,7 @@
             android:name=".DetectorActivity"
             android:exported="true"
             android:label="@string/tfe_od_app_name"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
