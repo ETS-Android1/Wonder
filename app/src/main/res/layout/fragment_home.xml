@@ -185,27 +185,6 @@
             android:padding="10dp"
             android:drawableRight="@drawable/shop_resize"/>
 
-        <!--<LinearLayout
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="매장 확인하기"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="리필스테션 매장을 확인 할 수 있어요"
-                android:textSize="11dp"
-                android:textColor="#4F987A"/>
-
-        </LinearLayout>-->
-
     </LinearLayout>
 
 
