@@ -18,7 +18,6 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="@drawable/home_icon_setting">
-
         </ImageButton>
 
         <TextView
@@ -30,17 +29,13 @@
             android:fontFamily="@font/notosansbold"
             android:textColor="#000000"
             android:textSize="20dp"
-            android:textStyle="bold"
-
-            >
-
+            android:textStyle="bold">
         </TextView>
 
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="@drawable/alarm_icon">
-
         </ImageButton>
 
     </LinearLayout>
@@ -71,6 +66,7 @@
                 android:layout_height="25dp"
                 android:layout_marginLeft="30dp"
                 android:background="@drawable/ar_date_bg"
+                android:padding="3dp"
                 android:text="2022년 2월 25일"
                 android:textSize="12dp"
                 android:textAlignment="center"
@@ -240,6 +236,7 @@
                 android:layout_height="25dp"
                 android:layout_marginLeft="30dp"
                 android:background="@drawable/ar_date_bg"
+                android:padding="3dp"
                 android:text="2021년 12월 25일"
                 android:textSize="12dp"
                 android:textAlignment="center"
