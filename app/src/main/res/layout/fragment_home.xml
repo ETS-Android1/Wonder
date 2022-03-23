@@ -41,7 +41,7 @@
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/home_icon_alarm">
+            android:background="@drawable/alarm_icon">
 
         </ImageButton>
 
@@ -56,17 +56,6 @@
         android:background="@drawable/home_backimg_itembuy2"
         android:gravity="center"
         >
-        <!--<ImageButton
-            android:layout_width="94dp"
-            android:layout_height="94dp"
-            android:background="@drawable/home_btn_location"
-            android:layout_marginTop="10dp"/>
-        <ImageButton
-            android:layout_width="94dp"
-            android:layout_height="94dp"
-            android:background="@drawable/home_btn_item"
-
-            android:layout_marginTop="10dp"/>-->
 
         <Button
             android:layout_width="90dp"
@@ -77,7 +66,8 @@
             android:paddingTop="15dp"
             android:paddingBottom="10dp"
             android:text="위치"
-            android:textSize="15dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/notosansregular"
             android:textColor="#505050"
             />
 
@@ -91,7 +81,8 @@
             android:paddingTop="12dp"
             android:paddingBottom="10dp"
             android:text="제품"
-            android:textSize="15dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/notosansregular"
             android:textColor="#505050"
             />
 
@@ -123,7 +114,8 @@
                 android:paddingTop="15dp"
                 android:paddingBottom="10dp"
                 android:text="용기스캔"
-                android:textSize="15dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/notosansregular"
                 android:textColor="#FFFFFF"
                 />
             <TextView
@@ -131,6 +123,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
                 android:text="AR로 용기를 인식해\n예상금액을 알 수 있어요"
+                android:fontFamily="@font/notosansregular"
                 android:textColor="#A6A6A6"
                 android:gravity="center"
                 android:textSize="11dp"/>
@@ -153,7 +146,8 @@
                 android:paddingTop="15dp"
                 android:paddingBottom="10dp"
                 android:text="유통기한"
-                android:textSize="15dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/notosansregular"
                 android:textColor="#FFFFFF"
                 />
             <TextView
@@ -161,6 +155,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
                 android:text="리필 제품의 유통기한을\n쉽게 등록할 수 있어요"
+                android:fontFamily="@font/notosansregular"
                 android:textColor="#A6A6A6"
                 android:gravity="center"
                 android:textSize="11dp"/>
@@ -183,6 +178,9 @@
             android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:padding="10dp"
+            android:text="매장 확인하기"
+            android:textSize="18dp"
+            android:fontFamily="@font/notosansbold"
             android:drawableRight="@drawable/shop_resize"/>
 
     </LinearLayout>

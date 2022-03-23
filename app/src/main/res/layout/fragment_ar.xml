@@ -27,6 +27,7 @@
             android:layout_marginLeft="120dp"
             android:layout_marginRight="120dp"
             android:text="AR"
+            android:fontFamily="@font/notosansbold"
             android:textColor="#000000"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -38,7 +39,7 @@
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/home_icon_alarm">
+            android:background="@drawable/alarm_icon">
 
         </ImageButton>
 
@@ -52,20 +53,285 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="최근 스캔 항목"
+            android:fontFamily="@font/notosansbold"
             android:textStyle="bold"
             android:textColor="#000000"
-            android:textSize="23dp"
+            android:textSize="18dp"
             android:elevation="100dp"
             android:padding="30dp">
-
         </TextView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/ar_date_bg"
+                android:text="2022년 2월 25일"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/notosansbold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:background="@drawable/ar_item_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/round_btn"
+                        android:gravity="center"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ar_shampoo_resize"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="알맹상점"
+                            android:fontFamily="@font/notosansregular"
+                            android:textSize="11dp"
+                            android:textColor="#939393"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:text="로즈마리 스칼프 스케일링 샴푸"
+                                android:fontFamily="@font/notosansbold"
+                                android:textSize="14dp"
+                                android:textColor="#000000"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="￦ 3540"
+                                android:fontFamily="@font/notosansbold"
+                                android:textSize="16dp"
+                                android:textColor="#000000"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="250G"
+                            android:fontFamily="@font/notosansregular"
+                            android:textSize="11dp"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:background="@drawable/ar_item_bg"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp">
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/round_btn"
+                        android:gravity="center"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ar_bottle_icon"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="유민얼랏"
+                            android:fontFamily="@font/notosansregular"
+                            android:textSize="11dp"
+                            android:textColor="#939393"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:text="체이싱래빗 클린저"
+                                android:fontFamily="@font/notosansbold"
+                                android:textSize="14dp"
+                                android:textColor="#000000"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="75dp"
+                                android:text="￦ 8640"
+                                android:fontFamily="@font/notosansbold"
+                                android:textSize="16dp"
+                                android:textColor="#000000"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="312G"
+                            android:fontFamily="@font/notosansregular"
+                            android:textSize="11dp"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/ar_date_bg"
+                android:text="2021년 12월 25일"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/notosansbold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_gravity="center"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:background="@drawable/ar_item_bg"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/round_btn"
+                        android:gravity="center"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ar_shampoo_resize"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="알맹상점"
+                            android:fontFamily="@font/notosansregular"
+                            android:textSize="11dp"
+                            android:textColor="#939393"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:text="에코띠크 친환경 세탁세제"
+                                android:fontFamily="@font/notosansbold"
+                                android:textSize="14dp"
+                                android:textColor="#000000"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="35dp"
+                                android:text="￦ 9680"
+                                android:fontFamily="@font/notosansbold"
+                                android:textSize="16dp"
+                                android:textColor="#000000"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="450G"
+                            android:fontFamily="@font/notosansregular"
+                            android:textSize="11dp"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom|center"
-
             >
             <Button
                 android:id="@+id/ar_btn"
@@ -73,6 +339,7 @@
                 android:layout_height="56dp"
                 android:background="@drawable/ar_btn_detection"
                 android:text="+ 용기 스캔"
+                android:fontFamily="@font/notosansbold"
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp"
@@ -82,9 +349,6 @@
 
 
         </LinearLayout>
-
-
-
 
         </LinearLayout>
 
