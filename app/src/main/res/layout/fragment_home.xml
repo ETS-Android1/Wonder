@@ -9,6 +9,9 @@
 
     //홈 프래그먼트 화면
 
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
