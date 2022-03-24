@@ -9,33 +9,33 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:background="@drawable/ar_top_blur">
 
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:visibility="invisible"
-            android:background="@drawable/home_icon_setting">
-
-        </ImageButton>
-
+            android:background="@drawable/home_icon_setting"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
-            android:layout_marginRight="120dp"
             android:text="제품선택"
             android:fontFamily="@font/notosansbold"
             android:textColor="#000000"
             android:textSize="20dp"
-            android:textStyle="bold"
-
-            >
-
-        </TextView>
-
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
