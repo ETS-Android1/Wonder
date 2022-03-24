@@ -13,7 +13,7 @@ public class TestActivity extends Activity {
 
         MyActivity myActivity = (MyActivity) this.getParent();
         String currentTab = myActivity.getTabHost().getCurrentTabTag();
-        ((Button)findViewById(R.id.button_Test)).setText(currentTab);
+    //    ((Button)findViewById(R.id.button_Test)).setText(currentTab);
 
     }
 }
