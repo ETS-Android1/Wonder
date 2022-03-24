@@ -30,7 +30,7 @@
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/alarm_icon">
+            android:background="@drawable/home_icon_alarm">
         </ImageButton>
     </LinearLayout>
 

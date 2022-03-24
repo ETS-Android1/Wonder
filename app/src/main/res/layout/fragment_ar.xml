@@ -13,13 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:gravity="center"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
         android:background="@drawable/ar_top_blur">
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/home_icon_setting">
-        </ImageButton>
-
+            android:background="@drawable/home_icon_setting"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,15 +33,15 @@
             android:fontFamily="@font/notosansbold"
             android:textColor="#000000"
             android:textSize="20dp"
-            android:textStyle="bold">
-        </TextView>
-
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
         <ImageButton
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/alarm_icon">
-        </ImageButton>
-
+            android:background="@drawable/home_icon_alarm"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
