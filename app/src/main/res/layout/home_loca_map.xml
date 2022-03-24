@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Home_loca_map">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- 위치 목록뷰 home_loca_list -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="@drawable/home_loca_bg">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginRight="120dp"
+            android:text="위치"
+            android:fontFamily="@font/notosansbold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/alarm_icon">
+        </ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="30dp">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ar_date_bg"
+            android:padding="3dp"
+            android:text="내 위치 중심"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:fontFamily="@font/notosansbold"/>
 
-</FrameLayout>
+        <!--지도-->
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/spot_resize"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/home_loca_mapiconbg"
+                android:drawableTop="@drawable/home_loca_listicon"
+                android:padding="15dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

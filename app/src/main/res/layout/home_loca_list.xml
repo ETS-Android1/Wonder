@@ -240,14 +240,18 @@
             </LinearLayout>
         </LinearLayout>
 
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="end"
-            android:layout_marginTop="170dp"
-            android:background="@drawable/home_loca_mapiconbg"
-            android:drawableTop="@drawable/map_icon"
-            android:padding="13dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/home_loca_mapiconbg"
+                android:drawableTop="@drawable/map_icon"
+                android:padding="13dp" />
+        </RelativeLayout>
 
     </LinearLayout>
 
