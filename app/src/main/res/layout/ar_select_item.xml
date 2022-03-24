@@ -27,6 +27,7 @@
             android:layout_marginLeft="120dp"
             android:layout_marginRight="120dp"
             android:text="제품선택"
+            android:fontFamily="@font/notosansbold"
             android:textColor="#000000"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -65,7 +66,8 @@
                     android:textSize="15dp"
                     android:textColor="#000000"
                     android:layout_marginTop="40dp"
-                    android:text="상점을 선택해주세요">
+                    android:text="상점을 선택해주세요"
+                    android:fontFamily="@font/notosansregular">
 
                 </TextView>
 
@@ -82,6 +84,7 @@
                         android:layout_height="33dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
                         android:textColor="#000000"
                         android:layout_marginRight="15dp"
                         android:text="지구샵">
@@ -93,6 +96,7 @@
                         android:layout_height="33dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
                         android:layout_marginRight="15dp"
                         android:textColor="#000000"
                         android:text="알맹상점">
@@ -104,6 +108,7 @@
                         android:layout_height="33dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
                         android:textColor="#000000"
                         android:text="아로마티카">
 
@@ -123,6 +128,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
                         android:textColor="#000000"
                         android:text="용기에 담을 상품을 선택해주세요">
 
@@ -154,6 +160,7 @@
                                 android:layout_height="33dp"
                                 android:background="@drawable/ar_btn_selector"
                                 android:textSize="15dp"
+                                android:fontFamily="@font/notosansregular"
                                 android:textColor="#000000"
                                 android:text="페이스">
                             </Button>
@@ -163,6 +170,7 @@
                                 android:layout_height="33dp"
                                 android:background="@drawable/ar_btn_selector"
                                 android:textSize="15dp"
+                                android:fontFamily="@font/notosansregular"
                                 android:textColor="#000000"
                                 android:text="세제">
 
@@ -173,6 +181,7 @@
                                 android:layout_height="33dp"
                                 android:background="@drawable/ar_btn_selector"
                                 android:textSize="15dp"
+                                android:fontFamily="@font/notosansregular"
                                 android:textColor="#000000"
                                 android:text="바디">
 
@@ -197,6 +206,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="토너">
@@ -206,6 +216,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="크림">
@@ -216,6 +227,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:text="클렌저">
 
@@ -234,6 +246,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="젤">
@@ -243,6 +256,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="썬크림">
@@ -251,6 +265,7 @@
                                 <Button
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
@@ -281,6 +296,7 @@
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
                                     android:textColor="#000000"
+                                    android:fontFamily="@font/notosansregular"
                                     android:layout_marginRight="20dp"
                                     android:text="세탁세제">
                                 </Button>
@@ -289,6 +305,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="섬유유연제">
@@ -299,6 +316,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_background_selectitem"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:text="주방세제">
 
@@ -329,6 +347,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="샴푸">
@@ -339,6 +358,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="바디워시">
@@ -350,6 +370,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:text="헤어에센스">
 
@@ -370,6 +391,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="컨디셔너">
@@ -380,6 +402,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:layout_marginRight="20dp"
                                     android:text="올인원워시">
@@ -391,6 +414,7 @@
                                     android:layout_height="33dp"
                                     android:background="@drawable/ar_btn_selector"
                                     android:textSize="15dp"
+                                    android:fontFamily="@font/notosansregular"
                                     android:textColor="#000000"
                                     android:text="핸드워시">
                                 </Button>
@@ -420,6 +444,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
                         android:layout_gravity="center"
                         android:textColor="#000000"
                         android:text="용기에 담을 제품을 선택해주세요">
@@ -454,6 +479,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
                         android:layout_gravity="center"
                         android:textColor="#000000"
                         android:text="담고싶은 g수를 입력해주세요">
@@ -482,6 +508,7 @@
                         android:visibility="invisible"
                         android:layout_width="140dp"
                         android:layout_height="41dp"
+                        android:fontFamily="@font/notosansregular"
                         android:background="@drawable/ar_btn_detection"
                         android:text="확인"
                         android:textColor="#000000"
