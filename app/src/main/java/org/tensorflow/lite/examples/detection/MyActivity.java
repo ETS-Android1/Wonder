@@ -15,7 +15,7 @@ public class MyActivity extends TabActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home_product);
 
         TabHost tabHost = getTabHost();  // The activity TabHost
         TabHost.TabSpec spec;  // Resusable TabSpec for each tab
@@ -25,23 +25,23 @@ public class MyActivity extends TabActivity
         // Create our custom view.
         View tabView = createTabView(this, "푸드");
         // Initialize a TabSpec for each tab and add it to the TabHost
-        spec = tabHost.newTabSpec("푸드").setIndicator(tabView)
+        spec = tabHost.newTabSpec("").setIndicator(tabView)
                 .setContent(intent);
         tabHost.addTab(spec);
         // Do the same for the other tabs
         tabView = createTabView(this, "세제");
         intent = new Intent().setClass(this, TestActivity.class);
-        spec = tabHost.newTabSpec("세제").setIndicator(tabView)
+        spec = tabHost.newTabSpec("").setIndicator(tabView)
                 .setContent(intent);
         tabHost.addTab(spec);
         tabView = createTabView(this, "바디");
         intent = new Intent().setClass(this, TestActivity.class);
-        spec = tabHost.newTabSpec("바디").setIndicator(tabView)
+        spec = tabHost.newTabSpec("").setIndicator(tabView)
                 .setContent(intent);
         tabHost.addTab(spec);
         tabView = createTabView(this, "페이스");
         intent = new Intent().setClass(this, TestActivity.class);
-        spec = tabHost.newTabSpec("페이스").setIndicator(tabView)
+        spec = tabHost.newTabSpec("").setIndicator(tabView)
                 .setContent(intent);
         tabHost.addTab(spec);
     }

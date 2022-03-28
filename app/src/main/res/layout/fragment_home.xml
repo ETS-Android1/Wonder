@@ -82,6 +82,7 @@
                     android:layout_weight="1" />
 
                 <Button
+                    android:id="@+id/home_product_btn"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_gravity="right"

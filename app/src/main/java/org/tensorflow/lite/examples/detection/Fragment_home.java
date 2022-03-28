@@ -1,5 +1,6 @@
 package org.tensorflow.lite.examples.detection;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -63,7 +64,22 @@ public class Fragment_home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
+        Button home_product_btn = (Button) v.findViewById(R.id.home_product_btn);
+        home_product_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        getActivity(),
+                        MyActivity.class
+                );
 
-        return inflater.inflate(R.layout.fragment_home, container, false);
+                startActivity(intent);
+            }
+
+
+        });
+        return v;
+        //   return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }
