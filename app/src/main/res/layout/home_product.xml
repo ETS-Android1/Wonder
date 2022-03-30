@@ -16,7 +16,9 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"></ImageButton>
+            android:layout_marginTop="20dp">
+
+        </ImageButton>
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,7 +28,9 @@
             android:text="제품"
             android:textColor="#000000"
             android:textSize="20dp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold">
+
+        </TextView>
 
     </LinearLayout>
 
@@ -35,8 +39,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
-
         <TabHost
             android:id="@android:id/tabhost"
             android:layout_width="match_parent"

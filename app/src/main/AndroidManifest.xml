@@ -17,6 +17,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ObjectDetection">
         <activity
+            android:name=".Home_shop_detail"
+            android:exported="true" />
+        <activity
+            android:name=".Setting"
+            android:exported="true" />
+        <activity
+            android:name=".Sign_in"
+            android:exported="true" />
+        <activity
+            android:name=".Sign_up"
+            android:exported="true" />
+        <activity
+            android:name=".Exp_detail"
+            android:exported="true" />
+        <activity
             android:name=".AR_select_item"
             android:exported="true" />
         <activity
