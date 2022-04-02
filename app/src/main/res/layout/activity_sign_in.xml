@@ -44,17 +44,21 @@
                 android:layout_height="40dp"
                 android:background="@drawable/white_bg"
                 android:layout_marginTop="20dp"
-                android:text="   아이디"/>
+                android:text="   아이디"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#6D6D6D"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/white_bg"
                 android:layout_marginTop="15dp"
-                android:text="   비밀번호"/>
+                android:text="   비밀번호"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#6D6D6D"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#FFFFF"
+                android:background="#00FFFFFF"
                 android:text="아이디/비밀번호를 잊으셨나요?"
                 android:textColor="#C8C8C8"/>
         </LinearLayout>
