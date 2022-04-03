@@ -1,5 +1,6 @@
 package org.tensorflow.lite.examples.detection;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -8,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +18,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Home_loca_map extends Fragment {
+    MainActivity activity;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,10 +61,44 @@ public class Home_loca_map extends Fragment {
         }
     }
 
+
+    public void onAttach(Context context){
+        super.onAttach(context);
+        activity = (MainActivity) getActivity();
+    }
+
+    public void onDetach(){
+        super.onDetach();
+        activity = null;
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.home_loca_map, container, false);
+        View v =  inflater.inflate(R.layout.home_loca_map, container, false);
+
+        //홈으로 돌아가기 버튼
+        ImageButton back_btn = v.findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(0);
+            }
+        });
+
+        //위치(리스트)로 가는 버튼
+        Button to_list_btn = v.findViewById(R.id.to_list_btn);
+        to_list_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(5);
+            }
+        });
+
+
+
+        return v;
     }
 }

@@ -1,5 +1,6 @@
 package org.tensorflow.lite.examples.detection;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +18,7 @@ import android.widget.Button;
  * create an instance of this fragment.
  */
 public class Fragment_home extends Fragment {
+    MainActivity activity;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,25 +63,53 @@ public class Fragment_home extends Fragment {
 
     }
 
+
+    public void onAttach(Context context){
+        super.onAttach(context);
+        activity = (MainActivity) getActivity();
+    }
+
+    public void onDetach(){
+        super.onDetach();
+        activity = null;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        Button home_product_btn = (Button) v.findViewById(R.id.home_product_btn);
-        home_product_btn.setOnClickListener(new View.OnClickListener() {
+
+        //제품화면으로 넘어가는 버튼
+        Button back_btn = v.findViewById(R.id.home_product_btn);
+        back_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(
-                        getActivity(),
-                        MyActivity.class
-                );
-
-                startActivity(intent);
+                activity.setFrag(3);
             }
-
-
         });
+
+
+        //위치(맵)으로 넘어가는 버튼
+        Button home_map = v.findViewById(R.id.home_loca_map_btn);
+        home_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(4);
+            }
+        });
+
+
+        //매장확인하기 화면으로 넘어가는 버튼
+        LinearLayout home_shops_btn = v.findViewById(R.id.home_shops_btn);
+        home_shops_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(6);
+            }
+        });
+
+
         return v;
         //   return inflater.inflate(R.layout.fragment_home, container, false);
     }
