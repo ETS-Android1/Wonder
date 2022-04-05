@@ -87,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
                 ft.commit();
                 break;
 
-            case 3: //홈화면 -> 제품화면 으로 이동
-                ft.replace(R.id.main_frame,home_product);
-                ft.commit();
-                break;
+          //  case 3: //홈화면 -> 제품화면 으로 이동
+            //    ft.replace(R.id.main_frame,home_product);
+              //  ft.commit();
+                //break;
 
             case 4: //홈화면 -> 위치(맵)화면
                 ft.replace(R.id.main_frame,home_loca_map);
