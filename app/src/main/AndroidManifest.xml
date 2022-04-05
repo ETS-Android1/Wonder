@@ -16,6 +16,10 @@
         android:roundIcon="@drawable/ar_btn_detection_green"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ObjectDetection">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCncbR2iaW8jj0gNKxb4azsDW1ZDB-BlJ0">
+        </meta-data>
         <activity
             android:name=".Home.Home_shop_detail"
             android:exported="true" />
