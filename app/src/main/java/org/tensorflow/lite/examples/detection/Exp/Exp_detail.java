@@ -1,8 +1,10 @@
-package org.tensorflow.lite.examples.detection;
+package org.tensorflow.lite.examples.detection.Exp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import org.tensorflow.lite.examples.detection.R;
 
 public class Exp_detail extends AppCompatActivity {
 

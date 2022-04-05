@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Home_loca_map">
+    tools:context=".Home.Home_loca_map">
 
     <!-- 위치 목록뷰 home_loca_list -->
     <LinearLayout

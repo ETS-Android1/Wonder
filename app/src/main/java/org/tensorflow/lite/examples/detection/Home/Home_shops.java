@@ -1,7 +1,6 @@
-package org.tensorflow.lite.examples.detection;
+package org.tensorflow.lite.examples.detection.Home;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,15 +8,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.ImageButton;
+
+import org.tensorflow.lite.examples.detection.MainActivity;
+import org.tensorflow.lite.examples.detection.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Fragment_home#newInstance} factory method to
+ * Use the {@link Home_shops#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment_home extends Fragment {
+public class Home_shops extends Fragment {
     MainActivity activity;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -29,9 +30,8 @@ public class Fragment_home extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Fragment_home() {
+    public Home_shops() {
         // Required empty public constructor
-
     }
 
     /**
@@ -40,11 +40,11 @@ public class Fragment_home extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment_home.
+     * @return A new instance of fragment Home_shops.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment_home newInstance(String param1, String param2) {
-        Fragment_home fragment = new Fragment_home();
+    public static Home_shops newInstance(String param1, String param2) {
+        Home_shops fragment = new Home_shops();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -55,14 +55,11 @@ public class Fragment_home extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
-
 
     public void onAttach(Context context){
         super.onAttach(context);
@@ -74,43 +71,24 @@ public class Fragment_home extends Fragment {
         activity = null;
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.home_shops, container, false);
 
-        //제품화면으로 넘어가는 버튼
-        Button back_btn = v.findViewById(R.id.home_product_btn);
+        //홈으로 다시 뒤로가기 버튼
+        ImageButton back_btn = v.findViewById(R.id.back_btn);
         back_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                activity.setFrag(3);
+                activity.setFrag(0);
             }
         });
 
-
-        //위치(맵)으로 넘어가는 버튼
-        Button home_map = v.findViewById(R.id.home_loca_map_btn);
-        home_map.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activity.setFrag(4);
-            }
-        });
-
-
-        //매장확인하기 화면으로 넘어가는 버튼
-        LinearLayout home_shops_btn = v.findViewById(R.id.home_shops_btn);
-        home_shops_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activity.setFrag(6);
-            }
-        });
 
 
         return v;
-        //   return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }

@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.detection;
+package org.tensorflow.lite.examples.detection.Home_product;
 
 import android.app.TabActivity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TabHost;
 import android.widget.TextView;
+
+import org.tensorflow.lite.examples.detection.R;
 
 public class MyActivity extends TabActivity
 {

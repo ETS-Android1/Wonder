@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment_ar">
+    tools:context=".AR.Fragment_ar">
 
 
     //ar 프래그먼트 화면

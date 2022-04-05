@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.detection;
+package org.tensorflow.lite.examples.detection.AR;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import org.tensorflow.lite.examples.detection.MainActivity;
+import org.tensorflow.lite.examples.detection.R;
 
 /**
  * A simple {@link Fragment} subclass.

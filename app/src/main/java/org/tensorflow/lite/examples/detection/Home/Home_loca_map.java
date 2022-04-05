@@ -1,5 +1,6 @@
-package org.tensorflow.lite.examples.detection;
+package org.tensorflow.lite.examples.detection.Home;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,13 +8,20 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+
+import org.tensorflow.lite.examples.detection.MainActivity;
+import org.tensorflow.lite.examples.detection.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link product_face#newInstance} factory method to
+ * Use the {@link Home_loca_map#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class product_face extends Fragment {
+public class Home_loca_map extends Fragment {
+    MainActivity activity;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +32,7 @@ public class product_face extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public product_face() {
+    public Home_loca_map() {
         // Required empty public constructor
     }
 
@@ -34,11 +42,11 @@ public class product_face extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment product_face.
+     * @return A new instance of fragment Home_loca_map.
      */
     // TODO: Rename and change types and number of parameters
-    public static product_face newInstance(String param1, String param2) {
-        product_face fragment = new product_face();
+    public static Home_loca_map newInstance(String param1, String param2) {
+        Home_loca_map fragment = new Home_loca_map();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -55,10 +63,44 @@ public class product_face extends Fragment {
         }
     }
 
+
+    public void onAttach(Context context){
+        super.onAttach(context);
+        activity = (MainActivity) getActivity();
+    }
+
+    public void onDetach(){
+        super.onDetach();
+        activity = null;
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product_face, container, false);
+        View v =  inflater.inflate(R.layout.home_loca_map, container, false);
+
+        //홈으로 돌아가기 버튼
+        ImageButton back_btn = v.findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(0);
+            }
+        });
+
+        //위치(리스트)로 가는 버튼
+        Button to_list_btn = v.findViewById(R.id.to_list_btn);
+        to_list_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(5);
+            }
+        });
+
+
+
+        return v;
     }
 }

@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ObjectDetection">
         <activity
-            android:name=".Home_shop_detail"
+            android:name=".Home.Home_shop_detail"
             android:exported="true" />
         <activity
             android:name=".Setting"
@@ -36,10 +36,10 @@
             android:exported="true" >
         </activity>
         <activity
-            android:name=".Exp_detail"
+            android:name=".Exp.Exp_detail"
             android:exported="true" />
         <activity
-            android:name=".AR_select_item"
+            android:name=".AR.AR_select_item"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

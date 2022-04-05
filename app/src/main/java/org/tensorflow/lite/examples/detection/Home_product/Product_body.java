@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.detection;
+package org.tensorflow.lite.examples.detection.Home_product;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.tensorflow.lite.examples.detection.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link product_body#newInstance} factory method to
+ * Use the {@link Product_body#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class product_body extends Fragment {
+public class Product_body extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class product_body extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public product_body() {
+    public Product_body() {
         // Required empty public constructor
     }
 
@@ -37,8 +39,8 @@ public class product_body extends Fragment {
      * @return A new instance of fragment product_body.
      */
     // TODO: Rename and change types and number of parameters
-    public static product_body newInstance(String param1, String param2) {
-        product_body fragment = new product_body();
+    public static Product_body newInstance(String param1, String param2) {
+        Product_body fragment = new Product_body();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,13 @@ public class product_body extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_product_body, container, false);
+        View v = inflater.inflate(R.layout.product_body, container, false);
+
+
+
+
+
+
+        return v;
     }
 }

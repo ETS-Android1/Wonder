@@ -1,8 +1,10 @@
-package org.tensorflow.lite.examples.detection;
+package org.tensorflow.lite.examples.detection.Home_product;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Button;
+
+import org.tensorflow.lite.examples.detection.Home_product.MyActivity;
+import org.tensorflow.lite.examples.detection.R;
 
 public class TestActivity extends Activity {
 

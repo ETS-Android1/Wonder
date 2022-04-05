@@ -5,14 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.tensorflow.lite.examples.detection.AR.Fragment_ar;
+import org.tensorflow.lite.examples.detection.Exp.Fragment_exp;
+import org.tensorflow.lite.examples.detection.Home.Fragment_home;
+import org.tensorflow.lite.examples.detection.Home.Home_loca_list;
+import org.tensorflow.lite.examples.detection.Home.Home_loca_map;
+import org.tensorflow.lite.examples.detection.Home_product.Home_product;
+import org.tensorflow.lite.examples.detection.Home.Home_shops;
 
 //프래그먼트들 바꾸는 액티비티
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private Home_loca_map home_loca_map;
     private Home_loca_list home_loca_list;
     private Home_shops home_shops;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
                 ft.commit();
                 break;
 
-          //  case 3: //홈화면 -> 제품화면 으로 이동
-            //    ft.replace(R.id.main_frame,home_product);
-              //  ft.commit();
-                //break;
+            case 3: //홈화면 -> 제품화면 으로 이동
+                ft.replace(R.id.main_frame, home_product);
+                ft.commit();
+                break;
 
             case 4: //홈화면 -> 위치(맵)화면
                 ft.replace(R.id.main_frame,home_loca_map);
