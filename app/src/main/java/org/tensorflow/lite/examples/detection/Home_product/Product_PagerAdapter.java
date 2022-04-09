@@ -3,15 +3,20 @@ package org.tensorflow.lite.examples.detection.Home_product;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class Product_PagerAdapter extends FragmentStatePagerAdapter {
+public class Product_PagerAdapter extends FragmentPagerAdapter {
+    private FragmentManager fm;
+    private FragmentTransaction ft;
     private final int numberOfFragment;
 
     public Product_PagerAdapter(FragmentManager fm, int numberOfFragment) {
-        super(fm, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        super(fm, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.numberOfFragment = numberOfFragment;
+
     }
 
     @NonNull
