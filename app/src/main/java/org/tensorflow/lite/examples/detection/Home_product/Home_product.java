@@ -3,8 +3,10 @@ package org.tensorflow.lite.examples.detection.Home_product;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import org.tensorflow.lite.examples.detection.MainActivity;
 import org.tensorflow.lite.examples.detection.R;
@@ -24,11 +27,11 @@ import org.tensorflow.lite.examples.detection.R;
 public class Home_product extends Fragment {
     MainActivity activity;
 
-    private Context mContext;
-    private TabLayout mTabLayout;
-    private ViewPager mViewPager;
-    private Product_PageAdapter mProductPageAdapter;
-    
+    private Product_PagerAdapter pagerAdapter;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private int tabCurrentIdx = 0;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -92,10 +95,44 @@ public class Home_product extends Fragment {
             public void onClick(View v) {activity.setFrag(0);}
         });
 
+        tabLayout = v.findViewById(R.id.tabs);
+        viewPager = v.findViewById(R.id.viewPager);
 
+        tabLayout.addTab(tabLayout.newTab().setText("푸드"));
+        tabLayout.addTab(tabLayout.newTab().setText("세제"));
+        tabLayout.addTab(tabLayout.newTab().setText("바디"));
+        tabLayout.addTab(tabLayout.newTab().setText("페이스"));
+
+        pagerAdapter = new Product_PagerAdapter(getChildFragmentManager(),tabLayout.getTabCount());
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(tabCurrentIdx);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+                tabCurrentIdx = tab.getPosition();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         //탭화면
         /*
+
+        private Context mContext;
+        private TabLayout mTabLayout;
+        private ViewPager mViewPager;
+        private Product_PageAdapter mProductPageAdapter;
+
         mContext = mContext.getApplicationContext();
         mTabLayout=v.findViewById(R.id.tabs);
 

@@ -9,6 +9,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="페이스"/>
+        android:text="페이스"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
 
 </FrameLayout>

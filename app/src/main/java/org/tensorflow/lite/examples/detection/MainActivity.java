@@ -2,6 +2,7 @@ package org.tensorflow.lite.examples.detection;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -17,6 +18,10 @@ import org.tensorflow.lite.examples.detection.Home.Home_loca_list;
 import org.tensorflow.lite.examples.detection.Home.Home_loca_map;
 import org.tensorflow.lite.examples.detection.Home_product.Home_product;
 import org.tensorflow.lite.examples.detection.Home.Home_shops;
+import org.tensorflow.lite.examples.detection.Home_product.Product_body;
+import org.tensorflow.lite.examples.detection.Home_product.Product_face;
+import org.tensorflow.lite.examples.detection.Home_product.Product_food;
+import org.tensorflow.lite.examples.detection.Home_product.Product_wash;
 
 //프래그먼트들 바꾸는 액티비티
 public class MainActivity extends AppCompatActivity {
@@ -33,11 +38,17 @@ public class MainActivity extends AppCompatActivity {
     private Home_loca_list home_loca_list;
     private Home_shops home_shops;
 
+    Fragment fragment1, fragment2, fragment3, fragment4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fragment1 = new Product_food();
+        fragment2 = new Product_wash();
+        fragment3 = new Product_body();
+        fragment4 = new Product_face();
 
         frag_home=new Fragment_home();
         frag_ar=new Fragment_ar();
