@@ -475,7 +475,9 @@
         android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
+        android:paddingTop="30dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"

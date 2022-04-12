@@ -918,8 +918,8 @@
             android:gravity="bottom|center">
             //제품 추가 버튼
             <Button
-                android:layout_width="184dp"
-                android:layout_height="56dp"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
                 android:background="@drawable/ar_btn_detection"
                 android:text="+ 제품 추가"
                 android:fontFamily="@font/notosansbold"
