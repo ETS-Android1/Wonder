@@ -16,33 +16,41 @@
             android:id="@+id/product_tea"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:background="@drawable/ar_btn_selector"
+            android:background="#00FFFFFF"
             android:textSize="15dp"
             android:fontFamily="@font/notosansregular"
             android:textColor="#000000"
             android:text="세탁세제">
         </Button>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#C2c2c2"
+            android:layout_gravity="center"/>
         <Button
             android:id="@+id/product_coffee"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:background="@drawable/ar_btn_selector"
+            android:background="#00FFFFFF"
             android:textSize="15dp"
             android:fontFamily="@font/notosansregular"
             android:textColor="#000000"
             android:text="섬유유연제">
-
         </Button>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="#C2c2c2"
+            android:layout_gravity="center"/>
         <Button
             android:id="@+id/product_spice"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:background="@drawable/ar_btn_selector"
+            android:background="#00FFFFFF"
             android:textSize="15dp"
             android:fontFamily="@font/notosansregular"
             android:textColor="#000000"
             android:text="주방세제">
-
         </Button>
 
 
