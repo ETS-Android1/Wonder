@@ -1,17 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home_product.Product_face">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="페이스"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/product_toner"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="토너">
+        </Button>
+        <Button
+            android:id="@+id/product_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="크림">
+
+        </Button>
+        <Button
+            android:id="@+id/product_cleanser"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="클렌저">
+
+        </Button>
+        <Button
+            android:id="@+id/product_gel"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="젤">
+        </Button>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

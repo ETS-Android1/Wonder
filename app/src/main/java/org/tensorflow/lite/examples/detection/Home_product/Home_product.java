@@ -11,7 +11,9 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -31,6 +33,14 @@ public class Home_product extends Fragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int tabCurrentIdx = 0;
+
+    Button product_tea;
+    Button product_coffee;
+    Button product_spice;
+    Button product_oatmeal;
+
+    LinearLayout food_tea_shop01;
+    LinearLayout food_tea_shop02;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -125,48 +135,6 @@ public class Home_product extends Fragment {
             }
         });
 
-        //탭화면
-        /*
-
-        private Context mContext;
-        private TabLayout mTabLayout;
-        private ViewPager mViewPager;
-        private Product_PageAdapter mProductPageAdapter;
-
-        mContext = mContext.getApplicationContext();
-        mTabLayout=v.findViewById(R.id.tabs);
-
-        mTabLayout.addTab(mTabLayout.newTab().setText("푸드"));
-        mTabLayout.addTab(mTabLayout.newTab().setText("세제"));
-        mTabLayout.addTab(mTabLayout.newTab().setText("페이스"));
-        mTabLayout.addTab(mTabLayout.newTab().setText("바디"));
-
-        mViewPager = v.findViewById(R.id.viewPager);
-       // mProductPageAdapter = new Product_PageAdapter(getSupportFragmentManager(),mTabLayout.getTabCount());
-        mViewPager.setAdapter(mProductPageAdapter);
-
-        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
-        mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                mViewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-       */
-        
-        
-        
         return v;
     }
 }

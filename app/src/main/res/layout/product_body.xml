@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home_product.Product_body">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="바디"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/product_shampoo"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="샴푸">
+        </Button>
+        <Button
+            android:id="@+id/product_bodycleanser"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="바디워시">
+
+        </Button>
+        <Button
+            android:id="@+id/product_hairessence"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="헤어에센스">
+
+        </Button>
+        <Button
+            android:id="@+id/product_hairconditioning"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/ar_btn_selector"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="컨디셔너">
+
+        </Button>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
